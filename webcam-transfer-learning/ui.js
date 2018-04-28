@@ -16,7 +16,7 @@
  */
 import * as tf from '@tensorflow/tfjs';
 
-const CONTROLS = ['up', 'down', 'left', 'right', 'fist', 'palm'];
+const CONTROLS = ['straight', 'down', 'left', 'right', 'pause', 'palm'];
 const CONTROL_CODES = [0, 1, 2, 3, 4, 5];
 
 export function init() {
@@ -65,11 +65,11 @@ export function setExampleHandler(handler) {
 let mouseDown = false;
 const totals = [0, 0, 0, 0, 0, 0];
 
-const upButton = document.getElementById('up');
+const straightButton = document.getElementById('straight');
 const downButton = document.getElementById('down');
 const leftButton = document.getElementById('left');
 const rightButton = document.getElementById('right');
-const fistButton = document.getElementById('fist');
+const pauseButton = document.getElementById('pause');
 const palmButton = document.getElementById('palm');
 const thumbDisplayed = {};
 
@@ -87,8 +87,8 @@ async function handler(label) {
   document.body.removeAttribute('data-active');
 }
 
-upButton.addEventListener('mousedown', () => handler(0));
-upButton.addEventListener('mouseup', () => (mouseDown = false));
+straightButton.addEventListener('mousedown', () => handler(0));
+straightButton.addEventListener('mouseup', () => (mouseDown = false));
 
 downButton.addEventListener('mousedown', () => handler(1));
 downButton.addEventListener('mouseup', () => (mouseDown = false));
@@ -99,8 +99,8 @@ leftButton.addEventListener('mouseup', () => (mouseDown = false));
 rightButton.addEventListener('mousedown', () => handler(3));
 rightButton.addEventListener('mouseup', () => (mouseDown = false));
 
-fistButton.addEventListener('mousedown', () => handler(4));
-fistButton.addEventListener('mouseup', () => (mouseDown = false));
+pauseButton.addEventListener('mousedown', () => handler(4));
+pauseButton.addEventListener('mouseup', () => (mouseDown = false));
 
 palmButton.addEventListener('mousedown', () => handler(5));
 palmButton.addEventListener('mouseup', () => (mouseDown = false));
