@@ -1,10 +1,4 @@
-# TensorFlow.js Examples
-
-This repository contains a set of examples implemented in
-[TensorFlow.js](http://js.tensorflow.org).
-
-Each example directory is standalone so the directory can be copied
-to another project.
+# TensorKart
 
 # Dependencies
 
